@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Forge Fit | Fitness Tracker</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="shell">
+    <header class="nav">
+      <div class="nav-left">
+        <div class="logo-mark">F</div>
+        <div class="logo-text">
+          <span>FORGE YOUR BODY</span>
+          <span>FORGE FIT</span>
+        </div>
+      </div>
+      <div class="nav-links">
+        <button class="nav-link active" data-section="home">
+          <span class="dot"></span>
+          Home
+        </button>
+        <button class="nav-link" data-section="plans">
+          <span class="dot"></span>
+          Workout & Diet
+        </button>
+        <button class="nav-link" data-section="goals">
+          <span class="dot"></span>
+          Transformation
+        </button>
+        <button class="nav-link" data-section="dashboard">
+          <span class="dot"></span>
+          Progress
+        </button>
+        <button class="nav-link" data-section="contact">
+          <span class="dot"></span>
+          Contact
+        </button>
+      </div>
+      <div class="nav-right">
+        <div class="theme-toggle" id="themeToggle">
+          <div class="theme-thumb"></div>
+        </div>
+        <div id="navAuthState" class="pill">
+          <span class="pill-dot"></span>
+          <span id="navAuthText">Guest mode · Demo data only</span>
+        </div>
+      </div>
+    </header>
+    <main class="layout">
+      <aside class="aside">
+        <section class="hero">
+          <div class="hero-bg-orb"></div>
+          <div class="hero-inner">
+            <div class="hero-left">
+              <div class="hero-tagline">
+                <span>DATA-DRIVEN FITNESS OS</span>
+                <span class="hero-tagline-line"></span>
+              </div>
+              <h1 class="hero-title">
+                Forge a body that <span>compounds</span> progress.
+              </h1>
+              <p class="hero-sub">
+                Personalized training, nutrition, and analytics in one secure dashboard.
+                Built as a portfolio project to showcase a local‑first architecture and polished front‑end craft.
+              </p>
+              <div class="hero-cta-row">
+                <button class="btn btn-primary" id="primaryCta">
+                  Start with your goal
+                </button>
+                <button class="btn btn-ghost" id="viewDemoDashboard">
+                  View dashboard demo
+                </button>
+              </div>
+              <div class="hero-pills">
+                <div class="metric-badge">
+                  <span class="dot-success"></span>
+                  <span>Encrypted localStorage · per‑user data only</span>
+                </div>
+                <div class="metric-badge">
+                  <span class="dot-warn"></span>
+                  <span>Natural progress guidance · no steroids</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section">
+          <div class="section-header">
+            <div>
+              <div class="section-title">Account & Security</div>
+              <div class="section-sub">
+                Local‑first auth with hashed passwords and per‑user encrypted storage.
+              </div>
+            </div>
+            <span class="badge-soft">No cross‑user data leakage</span>
+          </div>
+          <div class="form-card">
+            <div class="tabs-auth">
+              <button class="tab-auth active" data-auth="login">Login</button>
+              <button class="tab-auth" data-auth="signup">Sign up</button>
+            </div>
+            <form id="authForm">
+              <div class="field">
+                <label for="authEmail">Email</label>
+                <input type="email" id="authEmail" class="input" placeholder="you@forge.fit" required />
+              </div>
+              <div class="field">
+                <label for="authPassword">Password</label>
+                <input type="password" id="authPassword" class="input" placeholder="Create a strong passphrase" required />
+              </div>
+              <div class="field" id="signupGoalField" style="display:none;">
+                <label for="authGoal">Primary goal</label>
+                <select id="authGoal" class="select">
+                  <option value="lean">Lean · Recomposition</option>
+                  <option value="bulk">Bulky · Muscle gain</option>
+                  <option value="maintain">Maintenance · Performance</option>
+                </select>
+              </div>
+              <div class="checkbox-row">
+                <input type="checkbox" id="rememberMe" />
+                <label for="rememberMe">Keep me signed in on this device</label>
+              </div>
+              <div class="auth-footer">
+                <button type="submit" class="btn btn-primary" style="flex: 1;">
+                  <span id="authButtonLabel">Login</span>
+                </button>
+                <span class="link-sm" id="guestModeLink">Continue as guest</span>
+              </div>
+              <div class="form-meta">
+                Passwords are hashed client‑side and sensitive data is encrypted before hitting localStorage.
+              </div>
+              <div id="authMessage" class="error-text" style="display:none;"></div>
+            </form>
+          </div>
+        </section>
+      </aside>
+      <section class="main">
+        <!-- Home -->
+        <section class="section" data-section="home">
+          <div class="section-header">
+            <div>
+              <div class="section-title">Home · Case study overview</div>
+              <div class="section-sub">
+                High‑level snapshot designed so recruiters immediately see scope, structure and UX quality.
+              </div>
+            </div>
+            <span class="badge-soft">
+              Focus: <strong>portfolio‑ready</strong>
+            </span>
+          </div>
+          <div class="flex-row">
+            <div class="half">
+              <div class="card" style="border-radius: 18px; padding: 14px 14px 13px;">
+                <div class="section-title" style="font-size: 14px; margin-bottom: 4px;">
+                  What Forge Fit demonstrates
+                </div>
+                <ul class="list-compact">
+                  <li>Secure login/sign‑up, hashed passwords and user‑scoped encrypted localStorage.</li>
+                  <li>Goal‑based plans (Lean/Bulk/Maintenance) with training, nutrition and realistic timelines.</li>
+                  <li>Analytics‑style dashboard with logs, measurements and progress indicators.</li>
+                </ul>
+                <div class="chip-row" style="margin-top: 8px;">
+                  <span class="chip"><strong>Security</strong> · auth + encryption</span>
+                  <span class="chip"><strong>UX</strong> · responsive SPA layout</span>
+                  <span class="chip"><strong>Data</strong> · logs & stats</span>
+                </div>
+              </div>
+            </div>
+            <div class="half">
+              <div class="card" style="border-radius: 18px; padding: 14px 14px 13px;">
+                <div class="section-title" style="font-size: 14px; margin-bottom: 4px;">
+                  Success snapshots (demo)
+                </div>
+                <div class="activity-feed">
+                  <div class="activity-item">
+                    <div class="activity-main">
+                      <div class="activity-title">Aditya · Recomp (3 months)</div>
+                      <div class="activity-meta">
+                        ‑4.2 kg fat · +2.7 kg lean mass · consistency 86%.
+                      </div>
+                    </div>
+                    <span class="activity-tag">Lean phase</span>
+                  </div>
+                  <div class="activity-item">
+                    <div class="activity-main">
+                      <div class="activity-title">Sara · Strength (6 months)</div>
+                      <div class="activity-meta">
+                        Bench +20 kg · Squat +35 kg · improved sleep & energy.
+                      </div>
+                    </div>
+                    <span class="activity-tag">Bulk phase</span>
+                  </div>
+                  <div class="activity-item">
+                    <div class="activity-main">
+                      <div class="activity-title">Ravi · Lifestyle (1 year)</div>
+                      <div class="activity-meta">
+                        Maintained weight, lost 9 cm waist, trains 3× per week.
+                      </div>
+                    </div>
+                    <span class="activity-tag">Maintenance</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- New weekly stats block moved here from hero -->
+          <div class="card weekly-stats-card">
+            <div class="section-title" style="font-size: 14px; margin-bottom: 4px;">
+              Weekly stats (live demo)
+            </div>
+            <p class="section-sub" style="max-width:none; margin-bottom:6px;">
+              These numbers update as you log workouts, meals and measurements, giving recruiters a quick feel for the analytics layer without crowding the hero.
+            </p>
+            <div class="weekly-stats-grid">
+              <div class="weekly-stat">
+                <div class="weekly-stat-label">
+                  <span>Weekly volume</span>
+                  <span style="font-size:10px;">5‑day split</span>
+                </div>
+                <div class="weekly-stat-value" id="statWorkouts">0 sessions</div>
+                <div class="progress-track">
+                  <div class="progress-bar" id="statWorkoutsBar"></div>
+                </div>
+              </div>
+              <div class="weekly-stat">
+                <div class="weekly-stat-label">
+                  <span>Average intake</span>
+                  <span style="font-size:10px;">calories</span>
+                </div>
+                <div class="weekly-stat-value" id="statCalories">0 kcal</div>
+                <div class="progress-track">
+                  <div class="progress-bar" id="statCaloriesBar"></div>
+                </div>
+              </div>
+              <div class="weekly-stat">
+                <div class="weekly-stat-label">
+                  <span>Consistency</span>
+                  <span style="font-size:10px;">7‑day</span>
+                </div>
+                <div class="weekly-stat-value" id="statConsistency">0%</div>
+                <div class="progress-track">
+                  <div class="progress-bar" id="statConsistencyBar"></div>
+                </div>
+              </div>
+              <div class="weekly-stat">
+                <div class="weekly-stat-label">
+                  <span>Hydration</span>
+                  <span style="font-size:10px;">target</span>
+                </div>
+                <div class="weekly-stat-value" id="statHydration">0 / 3 L</div>
+                <div class="progress-track">
+                  <div class="progress-bar" id="statHydrationBar"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footnote">
+            <span>
+              <strong>Tip for viewers:</strong> Walk through Plans → Transformation → Progress to see how each feature connects.
+            </span>
+            <span>
+              Replace this note with your GitHub / portfolio link in production.
+            </span>
+          </div>
+        </section>
+        <!-- Plans -->
+        <section class="section hidden" data-section="plans">
+          <div class="section-header">
+            <div>
+              <div class="section-title">Workout & Diet plans</div>
+              <div class="section-sub">
+                Three fully‑defined paths: Lean (recomp), Bulky (gain) and Maintenance (balance) with training and daily nutrition.
+              </div>
+            </div>
+            <div class="tabs">
+              <button class="tab active" data-plan="lean">Lean</button>
+              <button class="tab" data-plan="bulk">Bulky</button>
+              <button class="tab" data-plan="maintain">Maintenance</button>
+            </div>
+          </div>
+          <div class="plans-grid" id="plansGrid"></div>
+          <div class="flex-row" style="margin-top: 12px;">
+            <div class="half">
+              <div class="chip-input">
+                <div class="chip-input-header">
+                  <span>Hydration & supplements</span>
+                  <span class="badge-soft">Natural guidance</span>
+                </div>
+                <ul class="list-compact">
+                  <li>Water: 2.5–3.5 L per day depending on climate and activity.</li>
+                  <li>Creatine monohydrate: 3–5 g daily for strength and performance.</li>
+                  <li>Whey or plant protein to help hit daily protein targets.</li>
+                  <li>Basic multivitamin and omega‑3 if dietary gaps exist.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="half">
+              <div class="chip-input">
+                <div class="chip-input-header">
+                  <span>Natural transformation rules</span>
+                  <span class="badge-soft">No steroids</span>
+                </div>
+                <ul class="list-compact">
+                  <li>Muscle gain: ~0.25–0.5 kg/month is realistic for trained lifters.</li>
+                  <li>Fat loss: 0.5–1% of bodyweight per week is sustainable.</li>
+                  <li>Prioritize sleep, stress management and progressive overload.</li>
+                  <li>Stay within 200–300 kcal surplus (bulk) or deficit (cut) for control.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Goals -->
+        <section class="section hidden" data-section="goals">
+          <div class="section-header">
+            <div>
+              <div class="section-title">Transformation timelines</div>
+              <div class="section-sub">
+                Realistic expectations across 1, 3, 6 and 12 months tuned to your primary goal.
+              </div>
+            </div>
+            <span class="badge-soft">Auto‑adapted to selected goal</span>
+          </div>
+          <div class="timeline-row" id="timelineRow"></div>
+          <div class="flex-row" style="margin-top: 12px;">
+            <div class="half">
+              <div class="chip-input">
+                <div class="chip-input-header">
+                  <span>Body measurements focus</span>
+                </div>
+                <ul class="list-compact">
+                  <li>Track weight, chest, waist, hips, arms and legs every 1–2 weeks.</li>
+                  <li>Use tape at the same time of day and conditions for consistency.</li>
+                  <li>Expect faster waist changes than limb circumference during fat loss.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="half">
+              <div class="chip-input">
+                <div class="chip-input-header">
+                  <span>Mindset & expectations</span>
+                </div>
+                <ul class="list-compact">
+                  <li>Think in quarters (3 months), not days; compounding sessions matter most.</li>
+                  <li>Plateaus are normal; adjust volume, intensity or calories, not effort.</li>
+                  <li>Form, sleep and stress reduction are as important as the training plan itself.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Dashboard -->
+        <section class="section hidden" data-section="dashboard">
+          <div class="section-header">
+            <div>
+              <div class="section-title">Progress dashboard</div>
+              <div class="section-sub">
+                Log workouts, meals and measurements, then watch consistency and alignment with your goal update in real time.
+              </div>
+            </div>
+            <span class="badge-soft">
+              View: <span id="dashboardViewLabel">This week</span>
+            </span>
+          </div>
+          <div class="dashboard-grid">
+            <div>
+              <div class="stat-row">
+                <div class="stat-card">
+                  <div class="stat-label">
+                    <span>Workouts logged</span>
+                    <span class="stat-trend-up" id="statWorkoutsTrend">0 this week</span>
+                  </div>
+                  <div class="stat-value" id="statWorkoutsBig">0</div>
+                  <div class="progress-track">
+                    <div class="progress-bar" id="statWorkoutsBigBar"></div>
+                  </div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-label">
+                    <span>Avg daily calories</span>
+                    <span class="stat-trend-down" id="statCaloriesTrend">0 vs goal</span>
+                  </div>
+                  <div class="stat-value" id="statCaloriesBig">0 kcal</div>
+                  <div class="progress-track">
+                    <div class="progress-bar" id="statCaloriesBigBar"></div>
+                  </div>
+                </div>
+              </div>
+              <table class="log-table" id="workoutTable">
+                <thead>
+                  <tr>
+                    <th>Date</th>
+                    <th>Type</th>
+                    <th>Duration</th>
+                    <th>Intensity</th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+            <div>
+              <div class="stat-card" style="margin-bottom:10px;">
+                <div class="stat-label">
+                  <span>Body measurements</span>
+                  <span id="statWeightMeta" class="stat-trend-up">Goal‑aligned</span>
+                </div>
+                <div class="stat-value" id="statWeight">— kg</div>
+                <div class="progress-track">
+                  <div class="progress-bar" id="statWeightBar"></div>
+                </div>
+              </div>
+              <div class="activity-feed" id="activityFeed"></div>
+            </div>
+          </div>
+          <div class="flex-row" style="margin-top: 12px;">
+            <div class="half">
+              <div class="chip-input">
+                <div class="chip-input-header">
+                  <span>Log workout</span>
+                </div>
+                <div class="chip-input-row">
+                  <input class="input" type="text" id="logWorkoutType" placeholder="Push, Pull, Legs..." />
+                  <input class="input" type="number" id="logWorkoutDuration" placeholder="min" style="max-width: 90px;" />
+                  <select class="select" id="logWorkoutIntensity" style="max-width: 130px;">
+                    <option value="Low">Low</option>
+                    <option value="Moderate">Moderate</option>
+                    <option value="High">High</option>
+                  </select>
+                </div>
+                <button class="btn btn-primary" id="logWorkoutBtn" style="margin-top:7px; align-self:flex-start;">
+                  Add workout
+                </button>
+              </div>
+            </div>
+            <div class="half">
+              <div class="chip-input">
+                <div class="chip-input-header">
+                  <span>Log meal</span>
+                </div>
+                <div class="chip-input-row">
+                  <input class="input" type="text" id="logMealName" placeholder="Oats & eggs..." />
+                  <input class="input" type="number" id="logMealCalories" placeholder="kcal" style="max-width: 90px;" />
+                  <input class="input" type="number" id="logMealProtein" placeholder="g protein" style="max-width: 110px;" />
+                </div>
+                <button class="btn btn-primary" id="logMealBtn" style="margin-top:7px; align-self:flex-start;">
+                  Add meal
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="flex-row" style="margin-top: 10px;">
+            <div class="half">
+              <div class="chip-input">
+                <div class="chip-input-header">
+                  <span>Update body measurements</span>
+                </div>
+                <div class="chip-input-row">
+                  <input class="input" type="number" id="measureWeight" placeholder="Weight (kg)" />
+                  <input class="input" type="number" id="measureChest" placeholder="Chest (cm)" />
+                  <input class="input" type="number" id="measureWaist" placeholder="Waist (cm)" />
+                </div>
+                <div class="chip-input-row">
+                  <input class="input" type="number" id="measureArms" placeholder="Arms (cm)" />
+                  <input class="input" type="number" id="measureLegs" placeholder="Legs (cm)" />
+                </div>
+                <button class="btn btn-primary" id="logMeasurementBtn" style="margin-top:7px; align-self:flex-start;">
+                  Save measurements
+                </button>
+              </div>
+            </div>
+            <div class="half">
+              <div class="chip-input">
+                <div class="chip-input-header">
+                  <span>For interviewers</span>
+                </div>
+                <ul class="list-compact">
+                  <li>Auth + encryption layer abstracts localStorage into a simple user‑scoped API.</li>
+                  <li>Progress stats recalc on each log event to mimic live analytics dashboards.</li>
+                  <li>Layout is intentionally neutral and spacious so content, not decoration, is the hero.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Contact -->
+        <section class="section hidden" data-section="contact">
+          <div class="section-header">
+            <div>
+              <div class="section-title">Contact & Support</div>
+              <div class="section-sub">
+                Simple contact area for portfolio context. Connect to your preferred backend or email service later.
+              </div>
+            </div>
+            <span class="badge-soft">Demo only · no backend</span>
+          </div>
+          <div class="flex-row">
+            <div class="half">
+              <div class="form-card">
+                <form id="contactForm">
+                  <div class="field">
+                    <label for="contactName">Name</label>
+                    <input id="contactName" class="input" placeholder="Your name" />
+                  </div>
+                  <div class="field">
+                    <label for="contactEmail">Email</label>
+                    <input id="contactEmail" class="input" type="email" placeholder="you@example.com" />
+                  </div>
+                  <div class="field">
+                    <label for="contactMessage">Message</label>
+                    <textarea id="contactMessage" rows="3" class="input" style="resize:none;" placeholder="Feedback, opportunities, or collaboration ideas"></textarea>
+                  </div>
+                  <button class="btn btn-primary" type="submit" style="margin-top: 10px; width: 100%;">
+                    Send message (mock)
+                  </button>
+                  <div class="form-meta">
+                    This form currently runs in demo mode only. Replace with your own handling or API endpoint later.
+                  </div>
+                  <div id="contactMessageStatus" class="success-text" style="display:none;"></div>
+                </form>
+              </div>
+            </div>
+            <div class="half">
+              <div class="chip-input">
+                <div class="chip-input-header">
+                  <span>For recruiters & interviewers</span>
+                </div>
+                <ul class="list-compact">
+                  <li>Built as a local‑first fitness OS to demonstrate architecture and UX thinking.</li>
+                  <li>Features include auth, secure localStorage, plan presets, progress logs and analytics UI.</li>
+                  <li>Easily extendable to real backend APIs (Node/Express, Django, etc.).</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
