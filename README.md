@@ -55,29 +55,6 @@ No frameworks, libraries, or build tools are used.
 
 ---
 
-## Application Structure
-
-### 1. Navigation Bar
-
-* Sticky header with brand identity
-* Section navigation (SPA‑style)
-* Theme toggle (Dark / Light)
-* Authentication state indicator
-
-### 2. Sections (SPA Layout)
-
-The app behaves like a **Single Page Application** using section toggling.
-
-| Section        | Purpose                                 |
-| -------------- | --------------------------------------- |
-| Home           | Case‑study overview & demo stats        |
-| Workout & Diet | Goal‑based training & nutrition plans   |
-| Transformation | Timeline‑based expectations             |
-| Progress       | Analytics dashboard & logging           |
-| Contact        | Mock contact form for portfolio context |
-
----
-
 ## Authentication & User Management
 
 ### Signup / Login
@@ -98,28 +75,12 @@ The app behaves like a **Single Page Application** using section toggling.
 * Optional "Remember me" functionality
 * Stores session email in localStorage
 
----
-
-## Security Model (Client‑Side)
-
-> This is **not enterprise‑grade security** — it is a **demonstration of security thinking** in a frontend‑only environment.
-
 ### Implemented Measures
 
 * Password hashing before storage
 * Per‑user storage keys
 * XOR‑based encryption layer for user data
 * No shared plaintext fitness data
-
-### Why This Matters
-
-Shows understanding of:
-
-* Threat modeling
-* User data isolation
-* Secure defaults even in demo apps
-
----
 
 ## Fitness Goals System
 
@@ -148,24 +109,6 @@ The selected goal dynamically affects:
 * Plans shown
 * Timeline expectations
 * Dashboard targets
-
----
-
-## Workout & Diet Plans
-
-Each goal contains:
-
-* Training split overview
-* Macro‑nutrition roadmap
-* Sample daily meal structure
-
-Plans are:
-
-* Data‑driven
-* Text‑based for clarity
-* Easy to extend or replace with API data
-
----
 
 ## Transformation Timelines
 
@@ -270,32 +213,6 @@ Demonstrates global state handling.
 
 ---
 
-## Contact Section
-
-* Mock contact form
-* No backend submission
-* Included for completeness and realism
-
-Designed to be easily wired to:
-
-* Email service
-* REST API
-* Serverless function
-
----
-
-## Extensibility
-
-This project is intentionally structured so it can be extended into a full product:
-
-* Replace localStorage with real backend APIs
-* Swap encryption layer for server‑side auth
-* Add charts (Chart.js, Recharts)
-* Add PWA support
-* Multi‑device sync
-
----
-
 ## Who This Project Is For
 
 * Recruiters evaluating frontend depth
@@ -304,11 +221,3 @@ This project is intentionally structured so it can be extended into a full produ
 * Proof of UX + engineering balance
 
 ---
-
-## Author Notes
-
-Forge Fit was built to answer the question:
-
-> "Can a single HTML file demonstrate real‑world application thinking?"
-
-The answer is **yes** — when structure, clarity, and intent are done right.
