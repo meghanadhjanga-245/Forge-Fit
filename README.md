@@ -124,7 +124,6 @@ Each card includes:
 
 This sets **realistic expectations**, an important UX decision.
 
----
 
 ## Progress Dashboard
 
@@ -145,7 +144,6 @@ This sets **realistic expectations**, an important UX decision.
 
 Dashboard updates **reactively** after each log event.
 
----
 
 ## Logging System
 
@@ -176,7 +174,6 @@ Each log:
 * Adds to activity feed
 * Persists per user
 
----
 
 ## UI & Design System
 
@@ -198,7 +195,6 @@ Each log:
 * Clear contrast
 * Logical content flow
 
----
 
 ## Theme System
 
@@ -208,7 +204,6 @@ Each log:
 
 Demonstrates global state handling.
 
----
 
 ## Who This Project Is For
 
@@ -217,4 +212,3 @@ Demonstrates global state handling.
 * Demonstration of non‑trivial JS logic
 * Proof of UX + engineering balance
 
----
