@@ -14,8 +14,6 @@ The application simulates a modern fitness OS where users can:
 
 All data is **user‑scoped, encrypted, and stored locally** in the browser.
 
----
-
 ## Key Design Principles
 
 ### 1. Local‑First Architecture
@@ -38,7 +36,6 @@ All data is **user‑scoped, encrypted, and stored locally** in the browser.
 * Realistic timelines (no extreme promises)
 * Emphasis on consistency, recovery, and habits
 
----
 
 ## Tech Stack
 
@@ -53,9 +50,9 @@ All data is **user‑scoped, encrypted, and stored locally** in the browser.
 
 No frameworks, libraries, or build tools are used.
 
----
 
-## Authentication & User Management
+
+# Authentication & User Management
 
 ### Signup / Login
 
