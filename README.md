@@ -2,7 +2,7 @@
 
 ## Overview
 
-**Forge Fit** is a fully client‑side, local‑first fitness tracking web application built using **pure HTML, CSS, and JavaScript**. It is designed as a **portfolio‑grade case study** to demonstrate front‑end engineering depth, UI/UX polish, data modeling, and secure client‑side state management — without relying on any backend services.
+**Forge Fit** is a fully client‑side, local‑first fitness tracking web application built using **pure HTML, CSS, and JavaScript**. It is designed as a **portfolio‑grade case study** to demonstrate front‑end engineering depth, UI/UX polish, data modeling, and secure client‑side state management — without relying  any backend services.
 
 The application simulates a modern fitness OS where users can:
 
