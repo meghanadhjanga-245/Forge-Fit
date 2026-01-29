@@ -107,26 +107,6 @@ The selected goal dynamically affects:
 * Timeline expectations
 * Dashboard targets
 
-## Transformation Timelines
-
-Visual timeline cards show:
-
-* 1 month
-* 3 months
-* 6 months
-* 12 months
-
-Each card includes:
-
-* Expected outcome
-* Key physiological changes
-* Phase label (habits, visible change, baseline, etc.)
-
-This sets **realistic expectations**, an important UX decision.
-
-
-## Progress Dashboard
-
 ### Metrics Tracked
 
 * Workouts logged
@@ -188,22 +168,6 @@ Each log:
 * Mobile‑first breakpoints
 * Grid collapses gracefully
 * Touch‑friendly controls
-
-### Accessibility Considerations
-
-* Readable font sizes
-* Clear contrast
-* Logical content flow
-
-
-## Theme System
-
-* Dark mode (default)
-* Light mode toggle
-* Preference saved in localStorage
-
-Demonstrates global state handling.
-
 
 ## Who This Project Is For
 
